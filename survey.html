@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>this is gonna hurt</title>
+</head>
+<body>
+<!-- as it is a survey form, we will need to submit the details, hence we use form. We can give absolute url, or relative url like /nextpage.jsp, and specify POST or GET method -->
+<form action="http://google.co.in">
+<!-- If we remove this, every thing will move to the left of the page-->
+<div align="center">
+    <!--Adds a heading to the form-->
+    <h1>Do You Touch Grass Survey Forum</h1>
+    <p>
+        name: 
+        <!-- Input type text for small texts, specify size -->
+        <input type="text" name="UserName" placeholder="you look like a troy to me" size=35 maxlength=35 value="">
+        <!--Adds spaces - remove and see what happens -->
+    </p>
+
+    <p>
+        toilet paper orientation:
+        <input type="radio" name="Over" value=1>Beard
+        <img src="https://i.imgur.com/BDZsq9B.jpg" style="float:inline-start;width:42px;height:42px;"> 
+        <input type="radio" name="Under" value=2>Mullet
+        <img src="https://i.imgur.com/Xbap6yU.jpg" style="float:inline-start;width:42px;height:42px;"> 
+    </p>
+
+    how often do you go outside (weekly)?
+    <p>
+        <!--Checkbox lets you select multiple options -->
+        <input type="checkbox" name="low">0-2 hours
+        <input type="checkbox" name="mid">3-6 hours
+        <input type="checkbox" name="high">7-11 hours
+        <input type="checkbox" name="liar">12+ hours
+    </p>
+
+    <p>
+        Tell us a little about yourself:
+        <!-- For writing lot of text like descriptions with text wrapping,
+        if you dont want text wrapping, you can add wrap = "off" (horizontal scrollbar -->
+        <textarea name="Comments" cols=30 rows=4></textarea>
+    </p>
+
+    <p>
+        Do you exercise at home?
+        <!-- Radio buttons help you choose one out of the many values -->
+        <input type="radio" name="exe" value=1>Yes
+        <input type="radio" name="exe" value=2>No
+    </p>
+
+    How do you like to read about your favorite topics?
+    <p>
+        <!--Checkbox lets you select multiple options -->
+        <input type="checkbox" name="Books">Books
+        <input type="checkbox" name="Web">Online resources
+        <input type="checkbox" name="Phone">Phone apps
+        <input type="checkbox" name="Magazines">Magazines
+    </p>
+
+    What genre of movies do you like?
+        <!--Select box lets you choose one of the multiple dropdown options-->
+        <select name="moviepref" ><option>
+            <option value=1 selected = "true">comedy
+            <option value=2 >romance
+            <option value=3 >thriller
+            <option value=4 >horror
+            <option value=5 >biopic
+        </select>
+
+    <!--submits the information entered in the form by the user -->
+    <input type=submit value="Submit form">
+</div>
+</form>
+</body>
+</html>
