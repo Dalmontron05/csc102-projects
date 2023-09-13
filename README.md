@@ -1,2 +1,2 @@
-# csc102-the-foundation
-first assignment for introduction to programming at UAT
+# CSC102 - Introduction to Programming Projects
+
