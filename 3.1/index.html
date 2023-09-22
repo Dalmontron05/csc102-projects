@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: burlywood;
+            background-color:antiquewhite;
         }
 
         #game {
@@ -50,8 +50,121 @@
 
 <body>
     <div id="game">
-        
+        <!-- Add a header for our hospital sim -->
+        <h1>Hospital Hustle</h1>
+        <h2>A Hospital Simulation</h2>
+        <!-- Add a div for the stats -->
+        <div id="stats">
+            <h3>Stats</h3>
+            <p>Money: <span id="money">10000</span></p>
+            <p>Patients: <span id="patients">0</span></p>
+            <p>Doctors: <span id="doctors">0</span></p>
+            <p>Nurses: <span id="nurses">0</span></p>
+            <p>Janitors: <span id="janitors">0</span></p>
+        </div>
+        <!-- add a div for the buildings -->
+        <div id="buildings">
+            <h3>Buildings</h3>
+            <!-- Add a button for the clinic -->
+            <button id="build-room" onclick="buildRoom()">Build Room ($5000)</button>
+            <!-- Add a button for the hospital -->
+            <button id="hire-doctor" onclick="hireDoctor()">Hire Doctor ($1000)</button>
+            <button id="hire-nurse" onclick="hireNurse()">Hire Nurse ($500)</button>
+        </div>
+        <!-- add a div for the patients -->
+        <div id="patients">
+            <h3>Patients</h3>
+            <button id="treat-patient" onclick="treatPatient()">Treat Patient</button>
+        </div>
     </div>
+    <!-- add javascript -->
+    <!-- javascript functions and code will start here at the script tag-->
+    <script>
+        // Variables
+        var money = 10000;
+        var patients = 0;
+        var doctors = 0;
+        var nurses = 0;
+
+        // Create a function to update the stats
+        function updateStats()
+        {
+            // Update the stats
+            document.getElementById("money").innerHTML = money;
+            document.getElementById("patients").innerHTML = money;
+            document.getElementById("doctors").innerHTML = money;
+            document.getElementById("nurses").innerHTML = money;
+        }
+
+        // Create a function to build a room
+        function buildRoom()
+        {
+            // Check if we have enough money to build a new room onto the hospital
+            if (money >= 5000)
+            {
+                // Subtract the money used to build a room ont the hospital
+                money -= 5000;
+                // Update the stats
+                updateStats();
+            }
+        }
+
+        function hireDoctor()
+        {
+            // Check if we have enough money to hire a doctor
+            if (money >= 1000)
+            {
+                // Subtract the money
+                money -= 1000;
+                // Add a doctor
+                doctors += 1;
+                // Update the stats
+                updateStats();
+            }
+        }
+
+        function hireNurse()
+        {
+            // Check if we have enough money
+            if (money >= 500)
+            {
+                // Subtract the money
+                money -= 500;
+                // Add a nurse
+                nurses += 1;
+                // Update the stats
+                updateStats();
+            }
+        }
+
+        function treatPatient()
+        {
+            /* Check if we have enough doctors and nurses.
+            We need at least 1 doctor and 1 nurse to treat a patient.*/
+            if (doctors >= 1 && nurses >= 1)
+            {
+                // Subtract the money
+                doctors -= doctors;
+                // Add a doctor
+                nurses -= 1;
+                money += 1000;
+                updateStats();
+            }
+        }
+
+        setInterval(function()
+        {
+            // check and see if we have less than 10 patients
+            if (patients < 10)
+            {
+                // if we do, then add a patient every 30 seconds
+                patients += 1;
+                // Update the stats
+                updateStats();
+            }
+        }, 30000);
+        // Javascript functions and code will end here at the script tag
+    </script>
 </body>
 </html>
 
