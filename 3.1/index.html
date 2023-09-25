@@ -8,27 +8,32 @@
 
     <!-- CSS -->
     <style>
-        body {
+        body
+        {
             font-family: 'Open Sans', sans-serif;
             background-color:antiquewhite;
         }
 
-        #game {
+        #game
+        {
             margin: 0 auto;
             width: 800px;
         }
 
-        #stats {
+        #stats
+        {
             float: left;
             width: 200px;
         }
 
-        #buildings {
+        #buildings
+        {
             float: left;
             width: 300px;
         }
 
-        #patients {
+        #patients
+        {
             float: left;
             width: 300px;
         }
@@ -57,10 +62,11 @@
         <div id="stats">
             <h3>Stats</h3>
             <p>Money: <span id="money">10000</span></p>
+            <p>Rooms: <span id="rooms">1</span></p>
             <p>Patients: <span id="patients">0</span></p>
             <p>Doctors: <span id="doctors">0</span></p>
             <p>Nurses: <span id="nurses">0</span></p>
-            <p>Janitors: <span id="janitors">0</span></p>
+            <!-- <p>Janitors: <span id="janitors">0</span></p> -->
         </div>
         <!-- add a div for the buildings -->
         <div id="buildings">
@@ -82,6 +88,7 @@
     <script>
         // Variables
         var money = 10000;
+        var rooms = 1;
         var patients = 0;
         var doctors = 0;
         var nurses = 0;
@@ -91,9 +98,10 @@
         {
             // Update the stats
             document.getElementById("money").innerHTML = money;
-            document.getElementById("patients").innerHTML = money;
-            document.getElementById("doctors").innerHTML = money;
-            document.getElementById("nurses").innerHTML = money;
+            document.getElementById("patients").innerHTML = patients;
+            document.getElementById("doctors").innerHTML = doctors;
+            document.getElementById("nurses").innerHTML = nurses;
+            document.getElementById("rooms").innerHTML = rooms;
         }
 
         // Create a function to build a room
@@ -102,8 +110,10 @@
             // Check if we have enough money to build a new room onto the hospital
             if (money >= 5000)
             {
-                // Subtract the money used to build a room ont the hospital
+                // Subtract the money used to build a room on the hospital
                 money -= 5000;
+                // Increase the number of rooms on the hospital
+                rooms++;
                 // Update the stats
                 updateStats();
             }
@@ -117,7 +127,7 @@
                 // Subtract the money
                 money -= 1000;
                 // Add a doctor
-                doctors += 1;
+                doctors++;
                 // Update the stats
                 updateStats();
             }
@@ -131,7 +141,7 @@
                 // Subtract the money
                 money -= 500;
                 // Add a nurse
-                nurses += 1;
+                nurses++;
                 // Update the stats
                 updateStats();
             }
@@ -144,10 +154,9 @@
             if (doctors >= 1 && nurses >= 1)
             {
                 // Subtract the money
-                doctors -= doctors;
-                // Add a doctor
-                nurses -= 1;
-                money += 1000;
+                doctors--;
+                nurses--;
+                money += 2000;
                 updateStats();
             }
         }
@@ -158,7 +167,7 @@
             if (patients < 10)
             {
                 // if we do, then add a patient every 30 seconds
-                patients += 1;
+                patients++;
                 // Update the stats
                 updateStats();
             }
