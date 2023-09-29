@@ -19,8 +19,12 @@ nav
     float: right;
     padding: 5px;
     line-height: 30px;
-    /* background-color: yellow; works but doesn't look good yet*/
-    /* color: tomato !important; */
+    /* background-color: rgb(140, 198, 231); */
+}
+
+a
+{
+    color: tomato;
 }
 
 /* Styles all the headers */
