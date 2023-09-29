@@ -3,6 +3,8 @@
 */
 /* remember your semicolons! treat it like a json file*/
 
+
+
 /* styles the body*/
 body
 {
@@ -10,27 +12,43 @@ body
     color:white;
 }
 
+
 /* styles the nav properties */
 nav
 {
     position: fixed !important; /* keeps the nav bar in a constant space on the users screen. whenever they scroll it will not budge */
-    height: 100px;
+    height: 46px;
     width: 100%; /* size paramaters can take # of pixels and percent as a value */
-    float: right;
-    padding: 5px;
+    box-sizing: border-box;
     line-height: 30px;
     /* background-color: rgb(140, 198, 231); */
 }
 
-a
+
+ul
 {
-    color: tomato;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-/* Styles all the headers */
-/* header
+
+li
 {
-} */
+    float: right;
+    padding-right: 5px;
+}
+
+
+li a
+{
+    display: block;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: chartreuse;
+}
+
 
 /* Styles the second largest headers */
 h2
@@ -38,6 +56,7 @@ h2
     color: rgb(135, 223, 226);
     text-align: center;
 }
+
 
 /* Styles the footer */
 footer
