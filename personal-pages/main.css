@@ -24,7 +24,7 @@ nav
     width: calc(100% - 15px); /* used calc to take up entire width except for the last 15px to match left margin*/
 
     /* Decoration */
-    background-color: rgba(0, 0, 0, 0.25); /* the 'a' in rgba is the alpha channel, it changes the transparency. */
+    background-color: rgba(0, 0, 0, 0.3); /* the 'a' in rgba is the alpha channel, it changes the transparency. */
 }
 
 
@@ -40,12 +40,14 @@ nav
     color: white;
 }
 
+/* .navHeader h3
+{
+    color: red;
+} */
+
 
 /* The navigation bar */
-.topNav
-{
-    overflow: hidden; /* Nav background spills in a weird way without this for some reason */
-}
+
 
 
 /* Style the links inside the navigation bar */
