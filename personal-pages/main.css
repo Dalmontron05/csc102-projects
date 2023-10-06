@@ -50,7 +50,7 @@ nav
 
 
 
-/* Style the links inside the navigation bar */
+/* Styles the links inside the navigation bar */
 .topNav a
 {
     /* Location */
@@ -65,7 +65,7 @@ nav
 }
     
     
-/* Change the color of links on hover */
+/* Styles the links inside the navigation bar when the mouse cursor is hovering above them */
 .topNav a:hover
 {
     background-color: #ddd;
@@ -73,7 +73,7 @@ nav
 }
 
 
-/* Add a color to the active/current link */
+/* Styles the link button for whichever page the user is currently on */
 .topNav a.active
 {
     background-color: rgb(135, 223, 226);
@@ -81,9 +81,10 @@ nav
 }
 
 
-.beforeNav
+/* Styles the element right after the navigation bar */
+.afterNav
 {
-    padding-top: 90px
+    padding-top: 90px /* adds padding so the navigation bar doesn't overlap the text itself */
 }
 
 
