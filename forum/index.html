@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+<!--* Survey page. This is from Assignment 6.1: User Input Validation  -->
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Secret Agent HQ</title>
+    <title>so we're in copper</title>
 
-    <!-- We dont' have a global CSS file rn, so we're going it in the page itself -->
+    <!-- We don't have a global CSS file rn, so we're going it in the page itself -->
     <style>
         body
         {
@@ -16,6 +20,7 @@
         }
 
 
+        /* Main container for our content */
         .container
         {
             max-width: 600px;
@@ -39,81 +44,96 @@
 </head>
 
 <body>
-    <!-- This will be our main container for our content -->
+    <!-- Main container for content -->
     <div class="container">
-        <!-- title for our secret agent app -->
+        <!-- Title -->
         <h1>Secret Agent HQ</h1>
 
-        <p>Agent, enter your details to receive the mission</p>
+        <p style="text-align: center;">Agent, enter your details to receive the mission</p>
 
-        <!-- add a single form for all our inputs needed -->
+
+        <!-- Forum Body -->
         <form id="agentForm">
-            <!-- Add the first name label and textbox -->
+            <!-- Adds the first name label and textbox -->
             <label for="firstName">First Name:</label>
             <input type="text" id="firstName" placeholder="Enter your first name" required><br><br>
+
 
             <!-- Adds the last name label and textbox-->
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" placeholder="Enter your last name" required><br><br>
 
+
             <!-- Adds the zipcode label and textbox -->
             <label for="zipcode">Zipcode:</label>
             <input type="text" id="zipcode" placeholder="Enter your zipcode" required><br><br>
+
 
             <!-- Submit button -->
             <input type="submit" value="Get Mission">
         </form>
 
-        <!-- Add a div to hold a hidden warning message -->
+
+        <!-- Holds warning messages. Messages will be appended and removed as seen fit -->
         <div id="warningMessage" class="warning"></div>
+
 
         <!-- Add a div to hold the mission details -->
         <div id="secretMission" style="display: none;">
-            Your mission should you choose to accept it: "Guard the mall entrance"
+            Your mission, should you choose to accept it: "Guard the mall entrance"
         </div>
 
-        <!-- Add our JavaScript for validation -->
+        
+        <!-- Adds our JavaScript for validation -->
         <script>
-            // Add an event listener to our form
+            // Adds an event listener for our form when the user presses submit.
             document.getElementById("agentForm").addEventListener("submit", function(event)
             {
-                // Prevent the default form submit action
+                // Prevents the default form submit action
                 event.preventDefault();
 
-                // Get the values from the form
+
+                // Gets the values from the form
                 const firstName = document.getElementById("firstName").value;
                 const lastName = document.getElementById("lastName").value;
                 const zipcode = document.getElementById("zipcode").value;
 
-                // Combine the first and last name
+
+                // VARIABLES
+                // Combines first and last names. Used for validation
                 const fullName = firstName + " " + lastName;
 
-                // Validate the length of the entire name so that it is not over 20 characters long
-                if(fullName.length > 20)
+                // Boolean that is false by default. Will be turned true if validation criteria is met
+                var isValid = false;
+
+
+                // VALIDATION CHECKERS. Will show a warning message if validation is not met.
+                // Checks to make sure name is not over 20 characters.
+                if(fullName.length > 50)
                 {
-                    // If it is over 20 characters long,s how the warning message
-                    document.getElementById("warningMessage").innerHTML = "Full Name is too long for our Records";
-                    return;
+                    document.getElementById("warningMessage").innerHTML = "i KNOW your name is not over 50 characters long, run it back lil bro";
                 }
-
-                if(zipcode.length != 5)
+                else if(zipcode.length != 5)
                 {
-                    //If it is not 5 characters long, show the warning message
-                    document.getElementbyId("warningMessage").innerHTML = "Invalid zipcode";
-                    return;
-                }
-
-
-                // Check if the zipcode is 5 characters long
-                if(zipcode.length != 5)
-                {
-                    // If it is not 5 characters long, show the warning message
-                    document.getElementById("warningMessage").innerHTML = "Invalid zipcode";
+                    document.getElementById("warningMessage").innerHTML = "zip codes only have 5 digits, dumbass";
                 }
                 else
                 {
-                    // If it is 5 characters long, hide the warning message
-                    document.getElementById("waringMessage").innerHTML = "";
+                    isValid = true;
+                }
+
+
+                // If all validation criteria is met, then shows mission details
+                if(isValid)
+                {
+                    // Will clear previous errors
+                    document.getElementById("warningMessage").innerHTML = "";
+                    
+                    document.getElementById("secretMission").style.display = "block";
+                }
+                else
+                {
+                    document.getElementById("secretMission").style.display = "none";
                 }
             });
         </script>
