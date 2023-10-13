@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secret Agent HQ</title>
+
+    <!-- We dont' have a global CSS file rn, so we're going it in the page itself -->
+    <style>
+        body
+        {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgba(71, 71, 71, 0.87);
+            color: white;
+        }
+
+
+        .container
+        {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(146, 146, 146);
+            box-shadow: 0px 0px 10px rgba(red, green, blue, alpha);
+        }
+
+
+        .warning
+        {
+            color: red;
+        }
+
+
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- This will be our main container for our content -->
+    <div class="container">
+        <!-- title for our secret agent app -->
+        <h1>Secret Agent HQ</h1>
+
+        <p>Agent, enter your details to receive the mission</p>
+
+        <!-- add a single form for all our inputs needed -->
+        <form id="agentForm">
+            <!-- Add the first name label and textbox -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" placeholder="Enter your first name" required><br><br>
+
+            <!-- Adds the last name label and textbox-->
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" placeholder="Enter your last name" required><br><br>
+
+            <!-- Adds the zipcode label and textbox -->
+            <label for="zipcode">Zipcode:</label>
+            <input type="text" id="zipcode" placeholder="Enter your zipcode" required><br><br>
+
+            <!-- Submit button -->
+            <input type="submit" value="Get Mission">
+        </form>
+
+        <!-- Add a div to hold a hidden warning message -->
+        <div id="warningMessage" class="warning"></div>
+
+        <!-- Add a div to hold the mission details -->
+        <div id="secretMission" style="display: none;">
+            Your mission should you choose to accept it: "Guard the mall entrance"
+        </div>
+
+        <!-- Add our JavaScript for validation -->
+        <script>
+            // Add an event listener to our form
+            document.getElementById("agentForm").addEventListener("submit", function(event)
+            {
+                // Prevent the default form submit action
+                event.preventDefault();
+
+                // Get the values from the form
+                const firstName = document.getElementById("firstName").value;
+                const lastName = document.getElementById("lastName").value;
+                const zipcode = document.getElementById("zipcode").value;
+
+                // Combine the first and last name
+                const fullName = firstName + " " + lastName;
+
+                // Validate the length of the entire name so that it is not over 20 characters long
+                if(fullName.length > 20)
+                {
+                    // If it is over 20 characters long,s how the warning message
+                    document.getElementById("warningMessage").innerHTML = "Full Name is too long for our Records";
+                    return;
+                }
+
+                if(zipcode.length != 5)
+                {
+                    //If it is not 5 characters long, show the warning message
+                    document.getElementbyId("warningMessage").innerHTML = "Invalid zipcode";
+                    return;
+                }
+
+
+                // Check if the zipcode is 5 characters long
+                if(zipcode.length != 5)
+                {
+                    // If it is not 5 characters long, show the warning message
+                    document.getElementById("warningMessage").innerHTML = "Invalid zipcode";
+                }
+                else
+                {
+                    // If it is 5 characters long, hide the warning message
+                    document.getElementById("waringMessage").innerHTML = "";
+                }
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
+
