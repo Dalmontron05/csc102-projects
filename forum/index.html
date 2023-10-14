@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--* Survey page. This is from Assignment 6.1: User Input Validation  -->
+<!--*This is for Assignment 6.1: User Input Validation. It's themed around the product I'm making in marketing -->
 
 
 
@@ -12,14 +12,15 @@
     <!-- Imports the Open Sans font -->
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 
-    <title>so we're in copper</title>
+    <title>Package Tracker</title>
 
     <!-- We don't have a global CSS file rn, so we're doing it in the page itself -->
     <style>
         body
         {
             font-family: 'Open Sans';
-            background-color: rgba(71, 71, 71, 0.87);
+            font-size: large;
+            background-color: rgb(38, 19, 126);
             color: white;
         }
 
@@ -27,11 +28,20 @@
         /* Main container for our content */
         .container
         {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
-            background-color: rgb(146, 146, 146);
+            background-color: rgb(58, 29, 189);
             box-shadow: 0px 0px 10px rgba(red, green, blue, alpha);
+        }
+
+
+        .centerImage
+        {
+            display: block; /* Due to images being an inline element, we must make it a block and set margins in order to center */
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
         }
 
 
@@ -45,15 +55,24 @@
             text-align: center;
         }
     </style>
+    
+    
+    <!-- Global JavaScript methods for general use -->
+    <script>
+        function isNumeric(num)
+        {
+            return !isNaN(num)
+        }
+    </script>
 </head>
 
 <body>
     <!-- Main container for content -->
     <div class="container">
-        <!-- Title -->
-        <h1>Secret Agent HQ</h1>
-
-        <p style="text-align: center;">Agent, enter your details to receive the mission</p>
+        <!-- Title and logo -->
+        <h1>OptimumPlay Accessories's Package Tracker</h1>
+        <img src="logo.png" alt="Company Logo" class=centerImage>
+        <p style="text-align: center;">Please Enter Your Details Below</p>
 
 
         <!-- Forum Body -->
@@ -74,7 +93,7 @@
 
 
             <!-- Submit button -->
-            <input type="submit" value="Get Mission">
+            <input type="submit" value="Track My Package">
         </form>
 
 
@@ -84,7 +103,7 @@
 
         <!-- Add a div to hold the mission details -->
         <div id="secretMission" style="display: none;">
-            Your mission, should you choose to accept it: "Guard the mall entrance"
+            Your Package is currently en route
         </div>
 
         
@@ -118,9 +137,15 @@
                     document.getElementById("warningMessage").innerHTML = "i KNOW your name is not over 20 characters long, run it back lil bro";
                 }
                 // Checks to make sure zipcode is exactly 5 characters
-                else if(zipcode.length != 5)
+                // (zipcode.length != 5 && 
+                else if (zipcode.length != 5)
                 {
                     document.getElementById("warningMessage").innerHTML = "zip codes only have 5 digits, dumbass";
+                }
+                // Checks to make sure zipcode only has number characters within it
+                else if (isNaN(zipcode))
+                {
+                    document.getElementById("warningMessage").innerHTML = "what kinda zip code do you have that has non-numbers?";
                 }
                 else
                 {
@@ -128,7 +153,7 @@
                 }
 
 
-                // If all validation criteria is met, then shows mission details
+                // If all validation criteria is met, then shows package details
                 if(isValid)
                 {
                     // Will clear previous errors
