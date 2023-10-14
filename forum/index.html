@@ -5,16 +5,20 @@
 
 <html lang="en">
 <head>
+    <!-- Adds metadata, apperently this is important but i dunno why -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Imports the Open Sans font -->
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
     <title>so we're in copper</title>
 
-    <!-- We don't have a global CSS file rn, so we're going it in the page itself -->
+    <!-- We don't have a global CSS file rn, so we're doing it in the page itself -->
     <style>
         body
         {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Open Sans';
             background-color: rgba(71, 71, 71, 0.87);
             color: white;
         }
@@ -23,7 +27,7 @@
         /* Main container for our content */
         .container
         {
-            max-width: 600px;
+            max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             background-color: rgb(146, 146, 146);
@@ -107,12 +111,13 @@
                 var isValid = false;
 
 
-                // VALIDATION CHECKERS. Will show a warning message if validation is not met.
-                // Checks to make sure name is not over 20 characters.
-                if(fullName.length > 50)
+                // VALIDATION CHECKERS. Will show a warning message if validation is not met
+                // Checks to make sure name is not over 20 characters
+                if(fullName.length > 20)
                 {
-                    document.getElementById("warningMessage").innerHTML = "i KNOW your name is not over 50 characters long, run it back lil bro";
+                    document.getElementById("warningMessage").innerHTML = "i KNOW your name is not over 20 characters long, run it back lil bro";
                 }
+                // Checks to make sure zipcode is exactly 5 characters
                 else if(zipcode.length != 5)
                 {
                     document.getElementById("warningMessage").innerHTML = "zip codes only have 5 digits, dumbass";
