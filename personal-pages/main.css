@@ -14,13 +14,31 @@ body
     color:white;
 }
 
+/* Styles the footer */
+footer
+{
+    text-align: center;
+}
+
+/* Styles the second largest headers */
+h2
+{
+    color: rgb(135, 223, 226);
+    text-align: center;
+}
+
+p
+{
+    font-size: 20px;
+}
+
 
 /* Styles the elements within the navbar*/
 nav
 {
     /* Location */
     position: fixed !important; /* makes the navbar constantly onscreen */
-    height: 100px;
+    height: 50px;
     width: calc(100% - 15px); /* used calc to take up entire width except for the last 15px to match left margin*/
 
     /* Decoration */
@@ -39,15 +57,6 @@ nav
     /* Decoration */
     color: white;
 }
-
-.navHeader h3
-{
-    color: red;
-}
-
-
-/* The navigation bar */
-
 
 
 /* Styles the links inside the navigation bar */
@@ -85,20 +94,5 @@ nav
 .afterNav
 {
     padding-top: 90px /* adds padding so the navigation bar doesn't overlap the text itself */
-}
-
-
-/* Styles the second largest headers */
-h2
-{
-    color: rgb(135, 223, 226);
-    text-align: center;
-}
-
-
-/* Styles the footer */
-footer
-{
-    text-align: center;
 }
 
