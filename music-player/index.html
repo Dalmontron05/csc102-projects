@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--* Music Player. For Assignment 7.1: Event Driven Programming-->
+<!--TODO Throw a mp3 song in here at some point for the assignment -->
+
+
+
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page-Wide Global CSS -->
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: green;
+        }
+
+        #player
+        {
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style the audio controns (buttons) */
+        button
+        {
+            margin: 5px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: blue;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+
+    <title>My relasxing Music</title>
+
+    <body>
+        <h1>My Relaxing music</h1>
+        <p>My relaxing music</p>
+
+        <div id="player">
+            <audio id="audio" src="rain.mp3"></audio>
+
+            <button onclick="playAudio()">Play</button>
+
+            <button onclick="pauseAudio()">Pause</button>
+
+            <button onclick="stopAudio()">Stop</button>
+        </div>
+
+        <script>
+            var audio = document.getElementById("audio");
+
+            function playAudio()
+            {
+                audio.play();
+            }
+
+            function pauseAudio()
+            {
+                audio.pause();
+            }
+
+            function stopAudio()
+            {
+                audio.pause();
+                audio.currentTime = 0;
+            } 
+        </script>
+    </body>
+</head>
+</html>
