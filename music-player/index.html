@@ -18,7 +18,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: green;
+            background-color: rgb(56, 56, 56);
+            color: rgb(180, 180, 180);
+            cursor: wait;
+            flex-direction: column;
         }
 
         #player
@@ -41,14 +44,17 @@
         }
     </style>
 
-    <title>My relasxing Music</title>
+    <title>My 'Relaxing' Music</title>
 
     <body>
-        <h1>My Relaxing music</h1>
-        <p>My relaxing music</p>
+        <div style="flex-direction: row;">
+            <h1>Beats To Rip/Tear To</h1>
+            <p style="color: brown;">Now Playing: BFG Division</p>
+        </div>
+        
 
         <div id="player">
-            <audio id="audio" src="rain.mp3"></audio>
+            <audio id="audio" src="Mick Gordon Mick Gordon - 11. BFG Division.mp3"></audio>
 
             <button onclick="playAudio()">Play</button>
 
@@ -79,3 +85,4 @@
     </body>
 </head>
 </html>
+
