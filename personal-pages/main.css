@@ -14,11 +14,13 @@ body
     color:white;
 }
 
+
 /* Styles the footer */
 footer
 {
     text-align: center;
 }
+
 
 /* Styles the second largest headers */
 h2
@@ -26,6 +28,7 @@ h2
     color: rgb(135, 223, 226);
     text-align: center;
 }
+
 
 p
 {

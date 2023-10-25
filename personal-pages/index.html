@@ -9,11 +9,22 @@
 <!-- Adds the head tag to contain the head elements. -->
 <head>
     <title>Home</title>
+
     <!-- Links to main CSS file -->
     <link href="main.css" rel="stylesheet">
 
-    <!-- Imports the Open Sans font -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet"> -->
+
+    <!-- Allows us to include HTML code. Method of using looks like: <div data-include="FileName"></div>. Do not include file extension in file name-->
+    <script src="jquery.js"></script> 
+    <script> 
+    $(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+            var file = 'views/' + $(this).data('include') + '.html'
+            $(this).load(file)
+        })
+    })
+    </script>
 </head>
 
 
@@ -81,25 +92,7 @@
 
 
     <footer>
-        <!-- icon badges -->
-        <a href="https://github.com/Dalmontron05">
-            <img alt="github" title="github"
-                src="https://custom-icon-badges.demolab.com/badge/Github-black.svg?logo=mark-github&style=for-the-badge" /></a>
-        <a href="discordapp.com/users/327505703579418625">
-            <img alt="discord" title="discord"
-                src="https://custom-icon-badges.demolab.com/badge/Discord-grey.svg?logo=discord&style=for-the-badge" /></a>
-        <a href="https://www.youtube.com/@dalmontron">
-            <img alt="youtube" title="youtube"
-                src="https://custom-icon-badges.demolab.com/badge/Youtube-red.svg?logo=youtube&style=for-the-badge" /></a>
-        <a href="https://www.instagram.com/dalmontron">
-            <img alt="instagram" title="instagram"
-                src="https://custom-icon-badges.demolab.com/badge/Instagram-purple.svg?logo=instagram&style=for-the-badge" /></a>
-        <p>
-            Daljeet Singh<br>
-            University of Advancing Technolagy<br>
-            2625 W Baseline Rd, Tempe, AZ 85283<br>
-            &copy; 2023, My Hobby
-        </p>
+        <div data-include="footer"></div>
     </footer>
 </body>
 
