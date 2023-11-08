@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaceport Simulation</title>
+
+
+    <!-- Page-wide CSS file -->
+    <style>
+        body
+        {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(11, 15, 27);
+            margin: 0;
+            padding: 20px;
+        }
+
+
+        #game-container
+        {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: darkblue;
+            border: 2px;
+            border-radius: 8px;
+        }
+
+
+        .ship
+        {
+            border: 1px solid white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+
+        button
+        {
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="game-container">
+        <h1>Spaceport Manager</h1>
+
+        <div id="directions">
+            <p>Welcome to Spaceport Manager! Use this console to keep track of all the ships that your service and to bill their captians.</p>
+            <p>Each time you click on a ship that has been serviced, credits will transfer from the captian of the ship to the Spaceport account.</p>
+        </div>
+
+
+        <div id="credits">
+            <h2>Galactic Credits: <span id="credits-amount">0</span></h2>
+        </div>
+
+
+        <!-- Will have content added through JS -->
+        <div id="ships-container"></div>
+
+
+        <script>
+            class Spaceship
+            {
+                constructor(name, serviceCost)
+                {
+                    this.name = name;
+                    this.serviceCost = serviceCost;
+                }
+
+
+                // Will service the ship and add credits
+                service()
+                {
+                    game.credits += this.serviceCost;
+                    game.updateCreditsDisplay();
+                }
+            }
+
+
+            // Create our game class
+            class Game
+            {
+                constructor()
+                {
+                    this.credits = 0;
+                    this.ships=[];
+                }
+
+
+                // Updates credits on the page
+                updateCreditsDisplay()
+                {
+                    document.getElementById("credits-amount").innerText = this.credits;
+                }
+
+
+                // Creates a ship on the page
+                addShip(ship)
+                {
+                    this.ships.push(ship);
+                    this.displayShip(ship);
+                }
+
+
+                // Displays a ship on the page
+                displayShip(ship)
+                {
+                    const container = document.getElementById("ships-container");
+                    const shipDiv = document.createElement("div");
+                    shipDiv.classList.add("ship");
+                    shipDiv.innerHTML = "<h2>" + ship.name + "</h2><p>Service Cost: " + ship.serviceCost + " credits";
+                    shipDiv.onclick = function()
+                    {
+                        ship.service();
+                    }
+                    container.appendChild(shipDiv);
+                }
+            }
+
+
+            // Create a new game object instance from our class
+            const game = new Game();
+
+
+            // Create a new ship object instance from our class.
+            const ships = 
+            [
+                new Spaceship("Millenium Falcon", 100),
+                new Spaceship("X-Wing", 200),
+                new Spaceship("Tie Fighter", 300),
+                new Spaceship("Star Destroyer", 400),
+                new Spaceship("Battlestar", 500),
+            ];
+
+            ships.forEach(ship => game.addShip(ship));
+        </script>
+    </div>
+</body>
+</html>
+
