@@ -4,33 +4,46 @@
     <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spaceport Simulation</title>
+    <title>Fallguys Platform Wars</title>
 
 
     <!-- Page-wide CSS file -->
     <style>
+        /* When you put the NAME OF A TAG then it will style all tags with that name.
+        Please note, this does not mean using the name property */
         body
         {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            background-color: rgb(11, 15, 27);
+            /* Location */
             margin: 0;
             padding: 20px;
+
+            /* Styling */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(22, 25, 32);
+            /* background-image: url(); */
+            color: whitesmoke;
         }
 
 
+        /* The # represents an id. Id's are class singletons*/
+        /* Main container */
         #game-container
         {
-            max-width: 600px;
+            /* Location */
             margin: auto;
+            max-width: 800px;
             padding: 20px;
-            background-color: darkblue;
             border: 2px;
             border-radius: 8px;
+
+            /* Styling */
+            background-color: rgb(37, 46, 53);
         }
 
-
+        /* The . represents a class. There can be multiple classes in a page */
         .ship
         {
+            /* Location */
             border: 1px solid white;
             margin-bottom: 10px;
             padding: 10px;
@@ -40,6 +53,7 @@
 
         button
         {
+            /* Location */
             padding: 5px 10px;
             margin-top: 10px;
         }
@@ -49,16 +63,16 @@
 
 <body>
     <div id="game-container">
-        <h1>Spaceport Manager</h1>
+        <h1>Platform Wars: Rainbow Six Siege</h1>
 
         <div id="directions">
-            <p>Welcome to Spaceport Manager! Use this console to keep track of all the ships that your service and to bill their captians.</p>
-            <p>Each time you click on a ship that has been serviced, credits will transfer from the captian of the ship to the Spaceport account.</p>
+            <p>Welcome to Platform Wars, starring Tom Clancy's: Rainbow Six Siege! When you launch the game on console, does it ever feel like you play against more cheaters than legit players? With the help of this website, you can realize your fears!</p>
+            <p>Whenever you finish a match, tally up all the players you played with and against. Rank them based on if they're controller or keyboard and mouse</p>
         </div>
 
 
         <div id="credits">
-            <h2>Galactic Credits: <span id="credits-amount">0</span></h2>
+            <h2>Sus-O-Meter: <span id="credits-amount">0</span></h2>
         </div>
 
 
