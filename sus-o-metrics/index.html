@@ -4,7 +4,10 @@
     <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fallguys Platform Wars</title>
+    <title>Sus-O-Metrics: R6</title>
+
+    <!-- Imports -->
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
 
     <!-- Page-wide CSS file -->
@@ -18,7 +21,7 @@
             padding: 20px;
 
             /* Styling */
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans';font-size: 18px;
             background-color: rgb(22, 25, 32);
             /* background-image: url(); */
             color: whitesmoke;
@@ -26,8 +29,7 @@
 
 
         /* The # represents an id. Id's are class singletons*/
-        /* Main container */
-        #game-container
+        #main-container
         {
             /* Location */
             margin: auto;
@@ -44,10 +46,12 @@
         .ship
         {
             /* Location */
-            border: 1px solid white;
             margin-bottom: 10px;
             padding: 10px;
             border-radius: 4px;
+
+            /* Styling */
+            border: 1px solid white;
         }
 
 
@@ -62,11 +66,14 @@
 
 
 <body>
-    <div id="game-container">
-        <h1>Platform Wars: Rainbow Six Siege</h1>
+    <div id="main-container">
+        <h1>Sus-O-Metrics: Rainbow Six Siege</h1>
 
         <div id="directions">
-            <p>Welcome to Platform Wars, starring Tom Clancy's: Rainbow Six Siege! When you launch the game on console, does it ever feel like you play against more cheaters than legit players? With the help of this website, you can realize your fears!</p>
+            <p>Welcome to Sus-O-Metrics, starring Tom Clancy's: Rainbow Six Siege!</p>
+            
+            <p>When you launch the game on console, does it ever feel like you play against more cheaters than legit players? With the help of this website, you can realize your fears!</p>
+
             <p>Whenever you finish a match, tally up all the players you played with and against. Rank them based on if they're controller or keyboard and mouse</p>
         </div>
 
@@ -130,7 +137,7 @@
                     const container = document.getElementById("ships-container");
                     const shipDiv = document.createElement("div");
                     shipDiv.classList.add("ship");
-                    shipDiv.innerHTML = "<h2>" + ship.name + "</h2><p>Service Cost: " + ship.serviceCost + " credits";
+                    shipDiv.innerHTML = "<h2>" + ship.name + "</h2><p>Sus Effect: " + ship.serviceCost;
                     shipDiv.onclick = function()
                     {
                         ship.service();
@@ -147,11 +154,10 @@
             // Create a new ship object instance from our class.
             const ships = 
             [
-                new Spaceship("Millenium Falcon", 100),
-                new Spaceship("X-Wing", 200),
-                new Spaceship("Tie Fighter", 300),
-                new Spaceship("Star Destroyer", 400),
-                new Spaceship("Battlestar", 500),
+                new Spaceship("Nothing Abnormal", -10),
+                new Spaceship("M&K", 50),
+                new Spaceship("Closet Cheater", 200),
+                new Spaceship("Blatent Cheater", 500)
             ];
 
             ships.forEach(ship => game.addShip(ship));
