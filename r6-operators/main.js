@@ -4,12 +4,12 @@ const flashcards =
     { question: 'What is 2+2?', answer: '4'},
 ];
 
-// Create a variable to store teh current flashcard index
+// Create a variable to store the current flashcard index
 let currentCard = 0;
 
 
 // Create a function to update the flashcards
-function updateCard()
+function updateFlashCard()
 {
     // get the curretn card object
     const card = document.getElementById('flashcard');
@@ -26,7 +26,20 @@ function updateCard()
 
 
 // init first card
-document.getElementById('flashcard').addEventListener('click,' function())
+updateFlashCard();
+
+document.getElementById('flashcard').addEventListener('click', function()
 {
-    
-}
+    this.classList.toggle('flipped');
+    updateFlashCard();
+});
+
+
+// Event lsitener for next button
+document.getElementById('next').addEventListener('click', function()
+{
+    currentCard = (currentCard + 1) % flashcards.length;
+    const card = document.getElementById('flashcard');
+    card.classList.remove('flipped');
+    updateFlashCard();
+});
