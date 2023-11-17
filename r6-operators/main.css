@@ -10,6 +10,7 @@ body
     margin: 0;
 }
 
+
 #flashcard
 {
     width: 300px;
@@ -26,10 +27,12 @@ body
     cursor: pointer;
 }
 
+
 #flashcard:flipped
 {
     transform: rotateY(180deg);
 }
+
 
 button
 {

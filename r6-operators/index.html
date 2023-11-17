@@ -1,8 +1,8 @@
+<!DOCTYPE html>
 <!-- Assignment 11.1: Incorporate Sound -->
 
 
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Metadata -->
@@ -10,23 +10,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siege Operator Dictionary</title>
 
+
     <!-- Imports -->
+    <!-- open sans font -->
     <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+    <!-- main css -->
     <link rel="stylesheet" href="main.css">
+
+    <!--? linking js up here makes it to where you have to click it to actually update the flashcard for some reason -->
+    <!-- <script scr="main.js"></script> -->
+
+    <!-- Link to main js -->
+    <!-- <script src="main.js"></script> -->
 </head>
 
 
 <body>
     <div id="flashcard-container">
-        <div id="flashcard">Click to flip the card over</div>
+        <div id="flashcard" onclick="updateFlashCard();">Click to flip the card over</div>
     </div>
 
+
+    <!-- Link to main js -->
+    <!-- <script src="main.js"></script> -->
 
     <!-- HTML button to get to next card -->
     <button id="next">Next Card</button>
 
 
-    <!-- Link to our JavaScript file -->
-    <script scr="main.js"></script>
+    <!-- Link to main js -->
+    <script src="main.js"></script>
 </body>
 </html>
+
