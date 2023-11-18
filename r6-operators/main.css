@@ -2,6 +2,16 @@
 
 
 
+button
+{
+    /* Style */
+    cursor: pointer;
+    background-color: slategrey;
+    border: 1px solid rgb(172, 196, 219);
+    font-size: 16px;
+}
+
+
 body
 {
     /* Style */
@@ -19,7 +29,7 @@ body
     flex-direction: column; 
     justify-content: center; /* Aligns items on the main axis*/
     align-items: center; /* Aligns items on the cross axis */
-    height: 98vh;
+    height: 98vh; /*? 100vh makes the viewr have to scroll for some reason */
     width: calc(100% - 500px); /* Provides horizontal margin that shrinks once min-width is met*/
     min-width: 800px;
     margin: auto; /*? Without this, align-items breaks for some reason. top, right, bottom, left*/
@@ -29,13 +39,15 @@ body
 }
 
 
-button
+.horizontal-box
 {
-    /* Style */
-    cursor: pointer;
-    background-color: slategrey;
-    border: 1px solid rgb(172, 196, 219);
-    font-size: 16px;
+    /* Location */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 100%;
 }
 
 
@@ -43,7 +55,7 @@ button
 {
     /* Location */
     width: 300px;
-    height: 499px;
+    height: 500px;
 
     /* Style */
     overflow: hidden;
