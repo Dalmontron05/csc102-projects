@@ -1,44 +1,70 @@
+/* Main CSS file */
+
+
+
 body
 {
+    /* Style */
     font-family: 'Open Sans';
     font-size: 18px;
+    background-color: rgb(67, 74, 80);
+    background-image: url(https://w.forfun.com/fetch/33/336cd1280a3890add39a001eea45af6e.jpeg);
+}
+
+
+#main
+{
+    /* Location */
     display: flex;
-    flex-direction: column;
-    align-items: column;
-    justify-content: center;
+    flex-direction: column; 
+    justify-content: center; /* Aligns items on the main axis*/
+    align-items: center; /* Aligns items on the cross axis */
     height: 100vh;
-    margin: 0;
-}
+    width: calc(100% - 500px); /* Provides horizontal margin that shrinks once min-width is met*/
+    min-width: 800px;
+    margin: auto; /*? Without this, align-items breaks for some reason. top, right, bottom, left*/
 
-
-#flashcard
-{
-    width: 300px;
-    height: 200px;
-    border: 1px solid whitesmoke;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-}
-
-
-#flashcard:flipped
-{
-    transform: rotateY(180deg);
+    /* Style */
+    background-color: rgba(50, 50, 50, 0.5);
 }
 
 
 button
 {
+    /* Location */
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+
+    /* Style */
     cursor: pointer;
+    background-color: slategrey;
+    border: 1px solid rgb(172, 196, 219);
+    font-size: 16px;
 }
+
+
+#flashcard
+{
+    /* Location */
+    width: 300px;
+    height: 200px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; */
+
+    /* Style */
+    cursor: pointer;
+    background-color: slategray;
+    
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+
+/* #flashcard:flipped
+{
+    transform: rotateY(180deg);
+} */
 
