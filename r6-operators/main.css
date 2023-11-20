@@ -2,16 +2,6 @@
 
 
 
-button
-{
-    /* Style */
-    cursor: pointer;
-    background-color: slategrey;
-    border: 1px solid rgb(172, 196, 219);
-    font-size: 16px;
-}
-
-
 body
 {
     /* Style */
@@ -22,14 +12,15 @@ body
 }
 
 
-#main
+/* MAIN FLEXBOX CONTAINERS */
+.main
 {
     /* Location */
     display: flex;
     flex-direction: column; 
-    justify-content: center; /* Aligns items on the main axis*/
+    justify-content: flex-start; /* Aligns items on the main axis*/
     align-items: center; /* Aligns items on the cross axis */
-    height: 98vh; /*? 100vh makes the viewr have to scroll for some reason */
+    height: 98vh; /*? 100vh makes the viewer have to scroll for some reason */
     width: calc(100% - 500px); /* Provides horizontal margin that shrinks once min-width is met*/
     min-width: 800px;
     margin: auto; /*? Without this, align-items breaks for some reason. top, right, bottom, left*/
@@ -44,10 +35,62 @@ body
     /* Location */
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* Style */
     width: 100%;
-    min-width: 100%;
+}
+
+
+.vertical-box
+{
+    /* Location */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Style */
+    width: 100%;
+}
+
+
+/* SPECIFIC FLEXBOX CONTAINERS */
+
+
+/* EVERYTHING ELSE */
+button
+{
+    /* Style */
+    cursor: pointer;
+    background-color: slategrey;
+    border: 1px solid rgb(172, 196, 219);
+    font-size: 16px;
+}
+
+h1
+{
+    color: whitesmoke;
+}
+
+h2
+{
+    color: whitesmoke;
+}
+
+
+.dot
+{
+    /* Location */
+    display: inline-block;
+    height: 23px;
+    width: 23px;
+
+    /* Style */
+    background-color: beige;
+    border-radius: 50%;
+    border: 2px solid beige;
 }
 
 
