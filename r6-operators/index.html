@@ -12,11 +12,24 @@
 
 
     <!-- Imports -->
+    <!-- main css -->
+    <link rel="stylesheet" href="main.css">
+
     <!-- open sans font -->
     <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
 
-    <!-- main css -->
-    <link rel="stylesheet" href="main.css">
+    <!-- Page-Wide CSS -->
+    <style>
+        .dot-rating
+        {
+            justify-content: flex-end;
+            align-items: flex-end;
+            align-self: flex-end;
+            padding-right: 30px;
+            /* padding-left: 50px; */
+            width: fit-content;
+        }
+    </style>
 </head>
 
 
@@ -28,36 +41,50 @@
             <img id="operator-portrait" src="https://static.wikia.nocookie.net/rainbowsix/images/7/7e/Mute_-_Full_Body.png" alt="operator portrait">
 
 
+            <!-- Operator Name, Icon, Speed, & Armor ratings -->
             <div class="vertical-box">
-                <!-- Operator Name and Portrait -->
-                <div class="horizontal-box">
+                <!-- Operator Name and Icon -->
+                <div class="horizontal-box" style="justify-content: flex-end; padding-right: 135px;">
                     <img id="operator-icon" src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3exeHnxH1tmUmQTequWRKa/e1b6c6f057eb24722dd7860af0276316/Y0R6_BADGE_Mute_L.png" alt="operator icon">
+
                     <h1 id="operator-name">Mute</h1>
                 </div>
 
 
                 <!-- Speed and Armor ratings -->
-                <h2>Speed</h2>
-                <div id="speed-stat">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-                
-                <h2>Armor</h2>
-                <div id="armor-stat">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <div class="horizontal-box dot-rating">
+                    <!-- Speed rating -->
+                    <div class="vertical-box dot-rating">
+                        <h2>Speed</h2>
+
+                        <div id="speed-stat">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+
+
+                    <!-- Armor rating -->
+                    <div class="vertical-box dot-rating" style="padding-right: 40px;">
+                        <h2>Armor</h2>
+
+                        <div id="armor-stat">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
 
+        <!-- Row 2 -->
         <!-- HTML button to get to next card -->
-        <div id="navigation-buttons">
-            <button id="previous">Previous Card</button>
-            <button id="next">Next Card</button>
+        <div id="navigation-buttons" class="horizontal-box" style="gap: 5px;">
+            <button id="previous" style="width: 100%;">Previous</button>
+            <button id="next" style="width: 100%;">Next</button>
         </div>
     </div>
 

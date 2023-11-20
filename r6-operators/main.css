@@ -26,7 +26,8 @@ body
     margin: auto; /*? Without this, align-items breaks for some reason. top, right, bottom, left*/
 
     /* Style */
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-image: linear-gradient(to top, rgba(255, 166, 1, 0.233), rgba(68, 52, 23, 0.3), rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5));
 }
 
 
@@ -64,9 +65,9 @@ button
 {
     /* Style */
     cursor: pointer;
-    background-color: slategrey;
-    border: 1px solid rgb(172, 196, 219);
-    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 0px;
+    font-size: 30px;
 }
 
 h1
