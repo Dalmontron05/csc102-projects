@@ -4,7 +4,10 @@
 
 const flashcards = 
 [
-    { question: 'What is the capitial of the United States?', answer: 'Washington, D.C.' },
+    {
+        question: 'What is the capitial of the United States?',
+        answer: 'Washington, D.C.'
+    },
     { question: 'What is 2+2?', answer: '4'},
     { question: 'who is the best op in siege?', answer: 'tachanka'}
 ];

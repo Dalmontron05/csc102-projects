@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Main index.html file -->
+<!--TODO: make quotes under the speed/armor. Like with mute it would be “People think my codename is because I don’t like to talk. Maybe I just don’t like you.” -->
 
 
 
@@ -17,18 +18,6 @@
 
     <!-- open sans font -->
     <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
-
-    <!-- Page-Wide CSS -->
-    <style>
-        .dot-rating
-        {
-            justify-content: flex-end;
-            align-items: flex-end;
-            align-self: flex-end;
-            padding-right: 30px; /* Padding between both groups of dots, not the dots themselves */
-            width: fit-content;
-        }
-    </style>
 </head>
 
 
@@ -37,13 +26,13 @@
         <!-- Row 1 -->
         <div class="horizontal-box">
             <!-- Operator Portrait -->
-            <img id="operator-portrait" style="justify-content: center; align-items: center; align-self: center; width: 100%;" src="https://static.wikia.nocookie.net/rainbowsix/images/7/7e/Mute_-_Full_Body.png" alt="operator portrait">
+            <img id="operator-portrait" src="https://static.wikia.nocookie.net/rainbowsix/images/7/7e/Mute_-_Full_Body.png" alt="operator portrait">
 
 
             <!-- Operator Name, Icon, Speed, & Armor ratings -->
             <div class="vertical-box">
                 <!-- Operator Name and Icon -->
-                <div class="horizontal-box" style="justify-content: center;">
+                <div class="horizontal-box" style="justify-content: center; padding-right: 50px; padding-left: 0px;">
                     <img id="operator-icon" src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3exeHnxH1tmUmQTequWRKa/e1b6c6f057eb24722dd7860af0276316/Y0R6_BADGE_Mute_L.png" alt="operator icon">
 
                     <h1 id="operator-name">Mute</h1>
@@ -80,10 +69,33 @@
 
 
         <!-- Row 2 -->
-        <!-- HTML button to get to next card -->
-        <div id="navigation-buttons" class="horizontal-box" style="gap: 5px;">
-            <button id="previous" style="width: 100%;">Previous</button>
-            <button id="next" style="width: 100%;">Next</button>
+        <!-- Operator Quote -->
+        <div id="operator-quote" class="horizontal-box">
+            <h4>"People think my codename is because I don’t like to talk. Maybe I just don’t like you."</h4>
+        </div>
+
+
+        <!-- Row 3 -->
+        <!-- Operator Description -->
+        <div id="operator-description" class="horziontal-box">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin semper quis massa in sagittis. Cras gravida lacus suscipit, pretium leo vel, dapibus erat. Mauris tempus pharetra posuere. Duis in nulla ut metus scelerisque dapibus. Nam dictum sodales ornare. Suspendisse aliquam et erat in tristique. Donec convallis placerat libero, eu mollis ligula iaculis porta. Aenean non pellentesque ipsum. Ut vel massa accumsan, congue mauris at, condimentum dui.<br><br>
+                
+                Quisque leo turpis, tincidunt bibendum ante et, sagittis faucibus dolor. Nullam euismod fermentum dictum. Integer quis varius massa. Nulla facilisi. Nunc leo nisi, auctor at condimentum ut, placerat ac tellus. Donec mauris ipsum, interdum non urna ac, ultricies porta mi. Aenean neque magna, congue nec tellus eu, semper viverra libero. Fusce luctus commodo tortor in mollis. Nam porta, elit id ultricies sollicitudin, enim turpis malesuada massa, sit amet sagittis ante justo sed urna. Suspendisse suscipit porta felis vel pretium. Pellentesque non dui non eros hendrerit consequat vel nec dolor.<br><br>
+                
+                Cras aliquet sapien et nulla ultricies, ac semper felis tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras nec facilisis sem. Curabitur suscipit sodales orci in dapibus. Suspendisse blandit velit sit amet imperdiet tincidunt. Sed ac semper libero, ut rhoncus orci. Pellentesque sodales felis quis consectetur iaculis. Suspendisse eget rutrum nunc, ut hendrerit tortor. Pellentesque rutrum fringilla tortor, in feugiat est suscipit sed. Nunc consequat tellus quis lectus accumsan maximus. Suspendisse aliquam iaculis ligula. Curabitur posuere fermentum magna, sed feugiat leo. Nullam tellus elit, venenatis nec sapien id, eleifend consectetur nulla. Nulla imperdiet arcu non lectus venenatis, eu iaculis mauris dictum. Cras ante ante, finibus eu efficitur sed, ornare vel sem. Nulla non dui a augue fermentum consectetur.<br><br>
+                
+                Vivamus nec nisl id velit lobortis feugiat. Nam vel cursus tellus. Nulla molestie massa nec ex porttitor, in laoreet turpis fermentum. Morbi sapien erat, ultrices eget vehicula et, fringilla at nisl. Fusce velit massa, ornare eget dolor in, congue elementum justo. Fusce et orci eros. Nunc volutpat quam et elementum efficitur. Integer orci lorem, bibendum eget fermentum id, bibendum in tortor. Maecenas auctor nisi sed nisi placerat pharetra. Vivamus dui purus, condimentum nec augue sed, sagittis hendrerit ligula. In nec volutpat metus.<br><br>
+                
+                Etiam et dolor vel risus mollis tristique. Donec lacinia lacinia elit ac lacinia. Nullam venenatis ipsum rhoncus nibh hendrerit efficitur. Nulla sit amet elementum arcu. Curabitur nec massa vel turpis mattis facilisis a in felis. Ut at aliquet velit. Vivamus nec elit ultrices, imperdiet augue non, viverra metus. In rutrum massa in tempor tempus. Aliquam erat volutpat. Donec rhoncus ullamcorper sapien quis lobortis. Donec fringilla, felis ac eleifend maximus, lorem diam pulvinar tellus, rhoncus vulputate dolor sem quis nisi.</p>
+        </div>
+
+
+        <!-- Row 4 -->
+        <!-- HTML buttons to navigate between operators -->
+        <div id="navigation-buttons" class="horizontal-box">
+            <button id="previous">◄</button>
+            <button id="next">►</button>
         </div>
     </div>
 
