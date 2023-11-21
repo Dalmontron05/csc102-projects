@@ -9,6 +9,7 @@ body
     font-size: 18px;
     background-color: rgb(67, 74, 80);
     background-image: url(https://w.forfun.com/fetch/33/336cd1280a3890add39a001eea45af6e.jpeg);
+    color: whitesmoke;
 }
 
 
@@ -66,18 +67,9 @@ button
     /* Style */
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.35);
+    color: whitesmoke; /*? Why on gods green earth is this needed for the git preview AND live server. But when I open up the file properly it's not?. I didn't overide the property anywhere so it should be defaulting to the button's text color */
     border: 0px;
     font-size: 30px;
-}
-
-h1
-{
-    color: whitesmoke;
-}
-
-h2
-{
-    color: whitesmoke;
 }
 
 
