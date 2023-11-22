@@ -2,13 +2,43 @@
 
 
 
+const operators =
+[
+    // Defenders
+    {
+        operatorName: "Mute",
+        operatorSpeed: 1,
+        operatorQuote: "\"People think my codename is because I don’t like to talk. Maybe I just don’t like you.\"",
+        operatorDescription: "placeholder descriptoion for mute",
+        operatorPortrait: "https://static.wikia.nocookie.net/rainbowsix/images/7/7e/Mute_-_Full_Body.png",
+        operatorIcon: "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3exeHnxH1tmUmQTequWRKa/e1b6c6f057eb24722dd7860af0276316/Y0R6_BADGE_Mute_L.png"
+    },
+    {
+        operatorName: "Smoke",
+        operatorSpeed: 2,
+        operatorQuote: "Smokes Quote placeholder",
+        operatorDescription: "Smokes description placeholder",
+        operatorPortrait: "smokes portrait placeholder",
+        operatorIcon: "smokes icon placeholder"
+    },
+    {
+        // put a 3 speed here
+    }
+]
+
+
+
+
 const flashcards = 
 [
     {
         question: 'What is the capitial of the United States?',
         answer: 'Washington, D.C.'
     },
-    { question: 'What is 2+2?', answer: '4'},
+    {
+        question: 'What is 2+2?',
+        answer: '4'
+    },
     { question: 'who is the best op in siege?', answer: 'tachanka'}
 ];
 
