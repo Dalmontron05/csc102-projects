@@ -7,7 +7,7 @@ const operators =
     // Defenders
     {
         operatorName: "Mute",
-        operatorSpeed: 1,
+        operatorSpeed: 1, // Armor is calculated from speed
         operatorQuote: "\"People think my codename is because I don’t like to talk. Maybe I just don’t like you.\"",
         operatorDescription: "placeholder descriptoion for mute",
         operatorPortrait: "https://static.wikia.nocookie.net/rainbowsix/images/7/7e/Mute_-_Full_Body.png",
@@ -44,21 +44,60 @@ function updateOperatorInfo()
 
 
     // Updates operator portrait
+    document.getElementById("operator-portrait").src = operators[currentOperator].operatorPortrait;
 
 
     // Updates operator icon
-    
-
-    // Updates operator speed
+    document.getElementById("operator-icon").src = operators[currentOperator].operatorIcon;
 
 
-    // Updates operator armor
+    // Updates operator speed AND armor
+    let speedDot1 = document.getElementById("speed-dot1");
+    let speedDot2 = document.getElementById("speed-dot2");
+    let speedDot3 = document.getElementById("speed-dot3");
+    let armorDot1 = document.getElementById("armor-dot1");
+    let armorDot2 = document.getElementById("armor-dot2");
+    let armorDot3 = document.getElementById("armor-dot3");
+
+    //* Make the style attributes not hardcoded at some point
+    if (operators[currentOperator].operatorSpeed == 1)
+    {
+        speedDot1.style["background-color"] = "beige";
+        speedDot2.style["background-color"] = "transparent";
+        speedDot3.style["background-color"] = "transparent";
+
+        armorDot1.style["background-color"] = "beige";
+        armorDot2.style["background-color"] = "beige";
+        armorDot3.style["background-color"] = "beige";
+    }
+    else if (operators[currentOperator].operatorSpeed == 2)
+    {
+        speedDot1.style["background-color"] = "beige";
+        speedDot2.style["background-color"] = "beige";
+        speedDot3.style["background-color"] = "transparent";
+
+        armorDot1.style["background-color"] = "beige";
+        armorDot2.style["background-color"] = "beige";
+        armorDot3.style["background-color"] = "transparent";
+    }
+    else
+    {
+        speedDot1.style["background-color"] = "beige";
+        speedDot2.style["background-color"] = "beige";
+        speedDot3.style["background-color"] = "beige";
+
+        armorDot1.style["background-color"] = "beige";
+        armorDot2.style["background-color"] = "transparent";
+        armorDot3.style["background-color"] = "transparent";
+    }
 
 
     // Updates operator quote
+    document.getElementById("operator-quote").innerHTML = operators[currentOperator].operatorQuote
 
 
     // Updates operator description
+    document.getElementById("operator-description").innerHTML = operators[currentOperator].operatorDescription
 }
 
 
