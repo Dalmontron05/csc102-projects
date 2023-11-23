@@ -33,5 +33,74 @@ const operators =
 
 
 // Create a variable to store the current operator index
-let currentOperator = 0;
+let currentOperator = 0; //? what's the difference between let and var? block-scope like wtf is that
+
+
+// function to update the operator info
+function updateOperatorInfo()
+{
+    // Updates operator name
+    document.getElementById("operator-name").innerHTML = operators[currentOperator].operatorName;
+
+
+    // Updates operator portrait
+
+
+    // Updates operator icon
+    
+
+    // Updates operator speed
+
+
+    // Updates operator armor
+
+
+    // Updates operator quote
+
+
+    // Updates operator description
+}
+
+
+//* THIS IS TEMPORARY until you've given proper operator 'template' info within html itself
+// init first operator
+updateOperatorInfo();
+
+
+// event listener for next button
+document.getElementById("next").addEventListener("click", function()
+{
+    // Keeps array from going out of bounds
+    if (currentOperator >= (operators.length - 1))
+    {
+        return;
+    }
+    else
+    {
+        // Increment the current operator index
+        currentOperator++;
+
+        // Update
+        updateOperatorInfo();
+    };
+});
+
+
+// event listener for previous button
+document.getElementById("previous").addEventListener("click", function()
+{
+    // Keeps array from going out of bounds
+    if (currentOperator <= 0)
+    {
+        return;
+    }
+    else
+    {
+        // Decrement the current operator index
+        currentOperator--;
+        
+        // Update
+        updateOperatorInfo();
+    }
+});
 
