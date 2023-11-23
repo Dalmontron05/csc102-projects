@@ -9,7 +9,7 @@ const operators =
         operatorName: "Mute",
         operatorSpeed: 1, // Armor is calculated from speed
         operatorQuote: "\"People think my codename is because I don’t like to talk. Maybe I just don’t like you.\"",
-        operatorDescription: "placeholder descriptoion for mute",
+        operatorDescription: "TEMPORARY Mute is best used as an anchor. He passively denies attackers drones. He also has a shotgun that's relatively good at site setup",
         operatorPortrait: "https://static.wikia.nocookie.net/rainbowsix/images/7/7e/Mute_-_Full_Body.png",
         operatorIcon: "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3exeHnxH1tmUmQTequWRKa/e1b6c6f057eb24722dd7860af0276316/Y0R6_BADGE_Mute_L.png"
     },
