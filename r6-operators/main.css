@@ -139,13 +139,7 @@ button
 }
 
 
-#previous
-{
-    width: 100%;
-}
-
-
-#next
+#previous, #next
 {
     width: 100%;
 }
