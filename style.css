@@ -1,0 +1,65 @@
+/* Main CSS file */
+
+
+
+body
+{
+    /* Locationg */
+    display: flex;
+    height: 98vh;
+
+
+    /* Style */
+    font-family: 'Open Sans';
+    font-size: 18px;
+    background-color: #0d1117;
+    /* background-image: url(https://w.forfun.com/fetch/33/336cd1280a3890add39a001eea45af6e.jpeg); */
+    background-size: cover;
+    color: whitesmoke;
+}
+
+
+/* MAIN FLEXBOX CONTAINERS */
+.main
+{
+    /* Location */
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; /* Aligns items on the main axis*/
+    align-items: center; /* Aligns items on the cross axis */
+    height: 90vh;
+    width: calc(100% - 500px); /* Provides horizontal margin that shrinks once min-width is met*/
+    min-width: 800px;
+    max-width: 1500px;
+    margin: auto; /* top, right, bottom, left*/
+
+    /* Style */
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    background-image: linear-gradient(to top, rgba(255, 166, 1, 0.233), rgba(68, 52, 23, 0.3), rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5));
+}
+
+
+.horizontal-box
+{
+    /* Location */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    /* Style */
+    width: 100%;
+}
+
+
+.vertical-box
+{
+    /* Location */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Style */
+    width: 100%;
+}
