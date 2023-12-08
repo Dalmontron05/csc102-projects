@@ -30,12 +30,12 @@ body
     height: 90vh;
     width: calc(100% - 500px); /* Provides horizontal margin that shrinks once min-width is met*/
     min-width: 800px;
-    max-width: 1500px;
+    max-width: 2000px;
     margin: auto; /* top, right, bottom, left*/
 
     /* Style */
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    background-image: linear-gradient(to top, rgba(255, 166, 1, 0.233), rgba(68, 52, 23, 0.3), rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5));
+    background-color: rgba(0, 0, 0, 0.3);
+    /* background-image: linear-gradient(to top, rgba(255, 166, 1, 0.233), rgba(68, 52, 23, 0.3), rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)); */
 }
 
 
@@ -63,3 +63,4 @@ body
     /* Style */
     width: 100%;
 }
+
