@@ -6,17 +6,18 @@
 nav
 {
     /* Location */
-    position: fixed !important; /* makes the navbar constantly onscreen */
+    position: fixed !important;
     height: 50px;
-    width: calc(100% - 15px); /* used calc to take up entire width except for the last 15px to match left margin*/
+    width: calc(100% - 15px);
+    /* padding-bottom: 90px; */
 
     /* Decoration */
-    background-color: rgba(0, 0, 0, 0.3); /* the 'a' in rgba is the alpha channel, it changes the transparency. */
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 
 /* Styles the header elements within the navbar */
-.navHeader
+nav h2
 {
     /* Location */
     text-align: right;
@@ -29,7 +30,7 @@ nav
 
 
 /* Styles the links inside the navigation bar */
-.topNav a
+nav a
 {
     /* Location */
     float: left;
@@ -42,25 +43,31 @@ nav
     font-size: 17px;
 }
     
-    
-/* Styles the links inside the navigation bar when the mouse cursor is hovering above them */
-.topNav a:hover
+
+nav a.home
 {
-    background-color: #ddd;
-    color: black;
+    background-color: rgb(97, 27, 27);
+    font-weight: 900;
 }
 
 
 /* Styles the link button for whichever page the user is currently on */
-.topNav a.active
+nav a.active
 {
     background-color: rgb(135, 223, 226);
     color: white;
 }
 
 
-/* Styles the element right after the navigation bar */
-.afterNav
+/* Styles the links inside the navigation bar when the mouse cursor is hovering above them */
+nav a:hover
 {
-    padding-top: 90px /* adds padding so the navigation bar doesn't overlap the text itself */
+    background-color: #ddd;
+    color: black;
 }
+
+nav a.home:hover
+{
+    background-color: pink;
+}
+
