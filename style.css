@@ -13,8 +13,11 @@ body
     font-family: 'Open Sans';
     font-size: 18px;
     background-color: #0d1117;
-    /* background-image: url(https://w.forfun.com/fetch/33/336cd1280a3890add39a001eea45af6e.jpeg); */
+    background-image: url(https://i.imgur.com/7HKbsZB.png);
+    background-position: left;
+    background-repeat: no-repeat;
     background-size: cover;
+    backdrop-filter: blur(8px);
     color: whitesmoke;
 }
 
@@ -36,7 +39,7 @@ body
     
 
     /* Style */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(41, 41, 41, 0.5);
 }
 
 
