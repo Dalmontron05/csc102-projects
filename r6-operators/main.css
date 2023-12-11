@@ -4,7 +4,7 @@
 
 body
 {
-    /* Locationg */
+    /* Location */
     display: flex;
     height: 98vh; /*? If height isn't specified here but is changed in .main, viewport itself is shrunk instead of just the flexbox. */
 
@@ -65,7 +65,7 @@ body
 }
 
 
-/* GENERALIZED CLASSES */
+/* EVERYTHING ELSE */
 button
 {
     /* Style */
@@ -101,7 +101,6 @@ button
 }
 
 
-/* IDs */
 #operator-portrait
 {
     /* Location */
