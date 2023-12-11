@@ -10,42 +10,32 @@
 <head>
     <title>Home</title>
 
+    <!-- Imports -->
+    <!-- navigation bar css -->
+    <link rel="stylesheet" href="../Libraries/nav.css">
+
     <!-- Links to main CSS file -->
-    <link href="main.css" rel="stylesheet">
-
-
-    <!-- Allows us to include HTML code. Method of using looks like: <div data-include="FileName"></div>. Do not include file extension in file name-->
-    <script src="jquery.js"></script> 
-    <script> 
-    $(function () {
-        var includes = $('[data-include]')
-        $.each(includes, function () {
-            var file = 'views/' + $(this).data('include') + '.html'
-            $(this).load(file)
-        })
-    })
-    </script>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 
 <!-- Adds the body tag to contain the body elements -->
 <body>
-    <div class="topNav">
-        <!-- Navbar -->
-        <nav>
-            <!-- Embedded links buttons -->
-            <a class="active" href="./index.html">Home</a>
-            <a href="./boards.html">Boards</a>
-    
-            <!-- Document title and date-->
-            <h2 class="navHeader">Home 09/14/2023</h2> <!--? they apply if i add them into the h2 and h3 tags, but not if i put those tags into a div with the class -->
-        </nav>
-    </div>
+    <!-- Navbar -->
+    <nav>
+        <!-- Embedded links buttons -->
+        <a class="home" href="../index.html">Home</a>
+        <a class="active" href="./index.html">Me</a>
+        <a href="./boards.html">Boards</a>
+        
+        <!-- Document title and date-->
+        <h2>Me 09/14/2023</h2>
+    </nav>
 
 
     <!-- Lists off my hobbys -->
     <div>
-        <h2 class="afterNav">A Page All About Me, Myself, and I</h2>
+        <h2>A Page All About Me, Myself, and I</h2>
         <p>
             My hobbys include Gaming, Coding, Drawing, Reading, and Writing.
         </p>
@@ -91,10 +81,17 @@
     </div>
 
 
+    <!-- Footer -->
     <footer>
-        <div data-include="footer"></div>
+        <div w3-include-html="./footer.html"></div> 
     </footer>
-</body>
 
+    
+    <!-- Links to and calls html-include -->
+    <script src="../Libraries/html-include.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
 </html>
 

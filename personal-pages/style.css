@@ -1,0 +1,37 @@
+/** The main CSS file */
+
+/* remember to refrence the css file in the head of desired html files
+    <link rel="stylesheet" href="main.css">
+*/
+/* remember your semicolons! treat it like a json file*/
+
+
+
+/* Styles the body*/
+body
+{
+    background-color:rgb(62, 78, 85);
+    color:white;
+}
+
+
+/* Styles the footer */
+footer
+{
+    text-align: center;
+}
+
+
+/* Styles the second largest headers */
+h2
+{
+    color: rgb(135, 223, 226);
+    text-align: center;
+}
+
+
+p
+{
+    font-size: 18px;
+}
+

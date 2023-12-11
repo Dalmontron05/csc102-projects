@@ -9,27 +9,31 @@
 <!-- Adds the head tag to contain the head elements. -->
 <head>
     <title>Boards</title>
-    <!-- CSS: Here we will link to our main.css page -->
-    <link rel="stylesheet" href="main.css">
+
+
+    <!-- Imports -->
+    <!-- navigation bar css -->
+    <link rel="stylesheet" href="../Libraries/nav.css">
+
+    <!-- Links to main CSS file -->
+    <link href="style.css" rel="stylesheet">
 </head>
 
 
 <!-- Add the body tag to contain the body elements -->
 <body>
-    <div class="topNav">
-        <!-- Navbar -->
-        <nav>
-            <!-- Embedded links buttons -->
-            <a href="./index.html">Home</a>
-            <a class="active" href="./boards.html">Boards</a>
-    
-            <!-- Document title and date-->
-            <h2 class="navHeader">Boards 09/14/2023</h2>
-        </nav>
-    </div>
+    <!-- Navbar -->
+    <nav>
+        <!-- Embedded links buttons -->
+        <a class="home" href="../index.html">Home</a>
+        <a href="./index.html">Me</a>
+        <a class="active" href="./boards.html">Boards</a>
+        
+        <!-- Document title and date-->
+        <h2>Boards 09/14/2023</h2>
+    </nav>
 
-
-    <h2 class="afterNav">Still a Coffee Addict</h2>
+    <h2>Still a Coffee Addict</h2>
 
     <div>
         <h2>Program Objectives</h2>
@@ -51,23 +55,17 @@
     </div>
 
 
+    <!-- Footer -->
     <footer>
-        <!-- icon badges -->
-        <a href="https://github.com/Dalmontron05">
-            <img alt="github" title="github" src="https://custom-icon-badges.demolab.com/badge/Github-black.svg?logo=mark-github&style=for-the-badge" /></a>
-        <a href="discordapp.com/users/327505703579418625">
-            <img alt="discord" title="discord" src="https://custom-icon-badges.demolab.com/badge/Discord-grey.svg?logo=discord&style=for-the-badge" /></a>
-        <a href="https://www.youtube.com/@dalmontron">
-            <img alt="youtube" title="youtube" src="https://custom-icon-badges.demolab.com/badge/Youtube-red.svg?logo=youtube&style=for-the-badge" /></a>
-        <a href="https://www.instagram.com/dalmontron">
-            <img alt="instagram" title="instagram" src="https://custom-icon-badges.demolab.com/badge/Instagram-purple.svg?logo=instagram&style=for-the-badge" /></a>
-        <p>
-            Daljeet Singh<br>
-            University of Advancing Technolagy<br>
-            2625 W Baseline Rd, Tempe, AZ 85283<br>
-            &copy; 2023, My Hobby
-        </p>
+        <div w3-include-html="./footer.html"></div> 
     </footer>
+
+    
+    <!-- Links to and calls html-include -->
+    <script src="../Libraries/html-include.js"></script>
+    <script>
+        includeHTML();
+    </script>
 </body>
 
 </html>
