@@ -63,7 +63,7 @@ function updateOperatorInfo()
     // Updates operator speed AND armor
     if (operators[currentOperator].operatorSpeed == 1)
     {
-        speedDot1.classList.add("filled")
+        speedDot1.classList.add("filled");
         speedDot2.classList.remove("filled");
         speedDot3.classList.remove("filled");
 
@@ -73,7 +73,7 @@ function updateOperatorInfo()
     }
     else if (operators[currentOperator].operatorSpeed == 2)
     {
-        speedDot1.classList.add("filled")
+        speedDot1.classList.add("filled");
         speedDot2.classList.add("filled");
         speedDot3.classList.remove("filled");
 
@@ -83,7 +83,7 @@ function updateOperatorInfo()
     }
     else
     {
-        speedDot1.classList.add("filled")
+        speedDot1.classList.add("filled");
         speedDot2.classList.add("filled");
         speedDot3.classList.add("filled");
 
@@ -94,11 +94,11 @@ function updateOperatorInfo()
 
 
     // Updates operator quote
-    document.getElementById("operator-quote").innerHTML = operators[currentOperator].operatorQuote
+    document.getElementById("operator-quote").innerHTML = operators[currentOperator].operatorQuote;
 
 
     // Updates operator description
-    document.getElementById("operator-description").innerHTML = operators[currentOperator].operatorDescription
+    document.getElementById("operator-description").innerHTML = operators[currentOperator].operatorDescription;
 }
 
 
