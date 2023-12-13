@@ -51,7 +51,7 @@ function updateOperatorInfo()
     document.getElementById("operator-icon").src = operators[currentOperator].operatorIcon;
 
 
-    // Updates operator speed AND armor
+    // Saves HTML dot-rating elements as variables
     let speedDot1 = document.getElementById("speed-dot1");
     let speedDot2 = document.getElementById("speed-dot2");
     let speedDot3 = document.getElementById("speed-dot3");
@@ -59,36 +59,37 @@ function updateOperatorInfo()
     let armorDot2 = document.getElementById("armor-dot2");
     let armorDot3 = document.getElementById("armor-dot3");
 
-    //* Make the style attributes not hardcoded at some point
+    
+    // Updates operator speed AND armor
     if (operators[currentOperator].operatorSpeed == 1)
     {
-        speedDot1.style["background-color"] = "beige";
-        speedDot2.style["background-color"] = "transparent";
-        speedDot3.style["background-color"] = "transparent";
+        speedDot1.classList.add("filled")
+        speedDot2.classList.remove("filled");
+        speedDot3.classList.remove("filled");
 
-        armorDot1.style["background-color"] = "beige";
-        armorDot2.style["background-color"] = "beige";
-        armorDot3.style["background-color"] = "beige";
+        armorDot1.classList.add("filled");
+        armorDot2.classList.add("filled");
+        armorDot3.classList.add("filled");
     }
     else if (operators[currentOperator].operatorSpeed == 2)
     {
-        speedDot1.style["background-color"] = "beige";
-        speedDot2.style["background-color"] = "beige";
-        speedDot3.style["background-color"] = "transparent";
+        speedDot1.classList.add("filled")
+        speedDot2.classList.add("filled");
+        speedDot3.classList.remove("filled");
 
-        armorDot1.style["background-color"] = "beige";
-        armorDot2.style["background-color"] = "beige";
-        armorDot3.style["background-color"] = "transparent";
+        armorDot1.classList.add("filled");
+        armorDot2.classList.add("filled");
+        armorDot3.classList.remove("filled");
     }
     else
     {
-        speedDot1.style["background-color"] = "beige";
-        speedDot2.style["background-color"] = "beige";
-        speedDot3.style["background-color"] = "beige";
+        speedDot1.classList.add("filled")
+        speedDot2.classList.add("filled");
+        speedDot3.classList.add("filled");
 
-        armorDot1.style["background-color"] = "beige";
-        armorDot2.style["background-color"] = "transparent";
-        armorDot3.style["background-color"] = "transparent";
+        armorDot1.classList.remove("filled");
+        armorDot2.classList.remove("filled");
+        armorDot3.classList.add("filled");
     }
 
 

@@ -85,7 +85,7 @@ button
     width: 23px;
 
     /* Style */
-    background-color: beige;
+    background-color: transparent;
     border-radius: 50%;
     border: 2px solid beige;
 }
@@ -98,6 +98,12 @@ button
     align-self: flex-end;
     padding-right: 30px; /* Padding between both groups of dots, not the dots themselves */
     width: fit-content;
+}
+
+
+.dot.filled
+{
+    background-color: beige;
 }
 
 
